@@ -1,19 +1,18 @@
-var fs = require('fs');
-var city = [];
-var fileContents = fs.readFileSync('city.csv');
-var lines = fileContents.toString().split('\n');
 
-for (var i=0; i<lines.length; i++)
-{
-    city.push(lines[i].toString().split('\n'));
-}
+//Create fs as the basic file system object
+var fs = require('fs');
+
+//Declare city as a single dimension array
+var city = [];
+
+//Read file contents in Synchrnous mode
+var fileContents = fs.readFileSync('city.csv');
+
+//split
+var lines = fileContents.toString().split('\n');
 
 for (var i=0;i<lines.length; i++)
 {
-    for (var j=0; j<1; j++)
-    {
-        console.log(city[i][j]);
-        console.log('\n');
-    }
-    
+
+        console.log(lines[i]);
 }
